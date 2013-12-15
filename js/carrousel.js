@@ -90,7 +90,7 @@
 		this.render = function(slideNum){
 
 			if(slideNum < 0)
-				slideNum = this.data.slides.length;
+				slideNum = this.data.slides.length-1;
 			if(slideNum >= this.data.slides.length)
 				slideNum = 0;
 
@@ -102,22 +102,22 @@
 			this.dim.width = _this.$slides.width();
 			// Position slides
 
-			this.$slides.removeClass('prev current next');
+			this.$slides.css({left: 0}).removeClass('prev current next');
 
-			this.$slides.eq(slideNum).addClass('current');
+			this.$slides.eq(slideNum).css({ left: 0}).addClass('current');
 
 			if(slideNum - 1 < 0){
-				this.$slides.eq(this.data.slides.length).addClass('prev');
+				this.$slides.eq(this.data.slides.length - 1).css({ left: -this.$slides.width()}).addClass('prev');
 			}
 			else{
-				this.$slides.eq(slideNum - 1).addClass('prev');
+				this.$slides.eq(slideNum - 1).css({ left: -this.$slides.width()}).addClass('prev');
 			}
 
 			if(slideNum + 1 > _this.data.slides.length - 1){
-				this.$slides.eq(0).addClass('next');
+				this.$slides.eq(0).css({ left: +this.$slides.width()}).addClass('next');
 			}
 			else{
-				this.$slides.eq(slideNum + 1).addClass('next');
+				this.$slides.eq(slideNum + 1).css({ left: this.$slides.width()}).addClass('next');
 			}
 
 
