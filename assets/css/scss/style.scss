@@ -1,0 +1,118 @@
+.container{
+
+	width: 100%;
+
+
+	#carrousel{
+
+		width: 90%;
+		margin: 20px auto;
+		position: relative;
+		height: 350px;
+		z-index: 9999;
+
+		.slides {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			display: none;			
+
+			overflow: hidden;
+
+			.slide{
+
+				position: absolute;
+
+				left: 2000px;
+				height: 100%;
+				width: 100%;
+
+				-webkit-transition: all ease 0.4s;
+				-moz-transition: all ease 0.4s;
+				-ms-transition: all ease 0.4s;
+				transition: all ease 0.4s;
+
+				.slide-image{
+					height: 100%;
+					width: 100%;
+
+					-webkit-background-size: cover;
+				  -moz-background-size: cover;
+				  -o-background-size: cover;
+				  background-size: cover;
+
+				}
+				.slide-text{
+
+				}
+				
+			}
+
+
+			.slide.prev{
+				left: -2000px;
+			}
+			.slide.current{
+				top: 0;
+				left: 0;
+			}
+			.slide.next{
+				left: 2000px;
+			}
+
+
+		}
+
+
+
+
+
+		.controls{
+
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background-color: #fff;
+			ul{
+
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+
+				li{
+
+					float: left;
+					list-style:  none;
+					margin: 0;
+					padding: 0;
+					a{
+
+						margin: 2px;
+						padding: 2px 5px;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+
+		.wait{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 99999;
+			p{
+				text-align: center;
+				top: 45%;
+				position: absolute;
+				width: 100%;
+			}
+		}
+
+
+
+	}
+}

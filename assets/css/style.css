@@ -1,0 +1,95 @@
+/* line 1, scss/style.scss */
+.container {
+  width: 100%;
+}
+/* line 6, scss/style.scss */
+.container #carrousel {
+  width: 90%;
+  margin: 20px auto;
+  position: relative;
+  height: 350px;
+  z-index: 9999;
+}
+/* line 14, scss/style.scss */
+.container #carrousel .slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow: hidden;
+}
+/* line 25, scss/style.scss */
+.container #carrousel .slides .slide {
+  position: absolute;
+  left: 2000px;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all ease 0.4s;
+  -moz-transition: all ease 0.4s;
+  -ms-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+/* line 38, scss/style.scss */
+.container #carrousel .slides .slide .slide-image {
+  height: 100%;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 55, scss/style.scss */
+.container #carrousel .slides .slide.prev {
+  left: -2000px;
+}
+/* line 58, scss/style.scss */
+.container #carrousel .slides .slide.current {
+  top: 0;
+  left: 0;
+}
+/* line 62, scss/style.scss */
+.container #carrousel .slides .slide.next {
+  left: 2000px;
+}
+/* line 73, scss/style.scss */
+.container #carrousel .controls {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+/* line 79, scss/style.scss */
+.container #carrousel .controls ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/* line 85, scss/style.scss */
+.container #carrousel .controls ul li {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 91, scss/style.scss */
+.container #carrousel .controls ul li a {
+  margin: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+}
+/* line 102, scss/style.scss */
+.container #carrousel .wait {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+}
+/* line 107, scss/style.scss */
+.container #carrousel .wait p {
+  text-align: center;
+  top: 45%;
+  position: absolute;
+  width: 100%;
+}
