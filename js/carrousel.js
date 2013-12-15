@@ -32,6 +32,7 @@
 
 			$('#carrousel .controls a').click(this.bind);
 			
+			$(window).keyup(this.bindKeys);
 
 			// Start Preload
 			this.preload();
@@ -45,6 +46,17 @@
 			_this.action(action)
 		}
 
+
+		this.bindKeys = function(e){
+			switch(e.keyCode){
+				case 37:
+					_this.action('prev');
+					break;		
+				case 39:
+					_this.action('next');
+					break;
+			}
+		}
 
 
 		this.preload = function(){
